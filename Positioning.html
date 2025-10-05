@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Set UTF-8 encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <title>CSS Positioning Demo</title> <!-- Title -->
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif; /* Set font */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      background: #f4f6f8; /* Background color */
+    }
+
+    h1 {
+      text-align: center; /* Center heading */
+      margin: 20px 0; /* Margin top and bottom */
+    }
+
+    /* Container for positioning demo */
+    .position-demo {
+      position: relative; /* Relative parent for absolute child */
+      min-height: 800px; /* Enough height to scroll */
+      margin: 20px; /* Space around container */
+      background-color: #e0f7fa; /* Light cyan */
+      border: 2px dashed #00acc1; /* Visual border */
+      padding-top: 10px; /* Top padding */
+    }
+
+    /* Boxes common styling */
+    .box {
+      width: 100px; /* Width */
+      height: 100px; /* Height */
+      text-align: center; /* Center text */
+      line-height: 100px; /* Center vertically */
+      color: white; /* White text */
+      font-weight: bold; /* Bold text */
+      margin: 10px; /* Margin */
+    }
+
+    /* Static box */
+    .static-box { 
+      background-color: #009688; /* Teal */
+      position: static; /* Default */
+    }
+
+    /* Relative box */
+    .relative-box { 
+      background-color: #ff9800; /* Orange */
+      position: relative; /* Relative positioning */
+      top: 20px; /* Move down */
+      left: 30px; /* Move right */
+    }
+
+    /* Absolute box */
+    .absolute-box { 
+      background-color: #f44336; /* Red */
+      position: absolute; /* Absolute positioning */
+      bottom: 10px; /* 10px from bottom */
+      right: 20px; /* 20px from right */
+    }
+
+    /* Sticky box */
+    .sticky-box {
+      position: sticky; /* Sticky */
+      top: 20px; /* Distance from top */
+      background-color: #8e24aa; /* Purple */
+      color: white; /* White text */
+      padding: 10px 20px; /* Padding */
+      border-radius: 5px; /* Rounded corners */
+      z-index: 100; /* Above other elements */
+      text-align: center; /* Center text */
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Positioning Demo</h1>
+
+  <section class="position-demo">
+    <div class="box static-box">Static</div> <!-- Static -->
+    <div class="box relative-box">Relative</div> <!-- Relative -->
+    <div class="box absolute-box">Absolute</div> <!-- Absolute -->
+    <div class="sticky-box">Sticky Box</div> <!-- Sticky -->
+    <p style="margin-top: 700px;">Scroll to see sticky box</p> <!-- Scroll space -->
+  </section>
+</body>
+</html>

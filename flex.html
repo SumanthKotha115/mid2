@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- UTF-8 encoding -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+<title>CSS Flexbox Demo</title>
+<style>
+  body {
+    font-family: "Poppins", Arial, sans-serif; /* Font */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    background-color: #f4f6f8; /* Background */
+  }
+
+  h1, h2 {
+    text-align: center; /* Center headings */
+  }
+
+  /* Flex container */
+  .flex-container {
+    display: flex; /* Activate flexbox */
+    flex-direction: row; /* Row layout */
+    justify-content: space-around; /* Space around items */
+    align-items: center; /* Align items vertically center */
+    flex-wrap: wrap; /* Wrap items */
+    gap: 10px; /* Gap between items */
+    padding: 20px; /* Padding */
+    background-color: #fff3e0; /* Light orange */
+  }
+
+  /* Flex items */
+  .flex-item {
+    background-color: #ffb74d; /* Orange */
+    width: 120px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    text-align: center; /* Center text horizontally */
+    line-height: 100px; /* Center text vertically */
+    font-weight: bold; /* Bold text */
+    border-radius: 10px; /* Rounded corners */
+    flex-grow: 1; /* Grow to fill space */
+    transition: transform 0.3s; /* Smooth scaling */
+  }
+
+  /* Hover effect */
+  .flex-item:hover {
+    transform: scale(1.1); /* Grow slightly on hover */
+  }
+
+  /* Advanced flex column reverse */
+  .flex-advanced {
+    display: flex; /* Flex container */
+    flex-direction: column-reverse; /* Reverse column */
+    align-items: flex-start; /* Align left */
+    justify-content: space-evenly; /* Even spacing */
+    background: #e1bee7; /* Light purple */
+    padding: 10px; /* Padding */
+  }
+
+  .flex-advanced div {
+    background: #ab47bc; /* Darker purple */
+    color: white; /* White text */
+    padding: 10px; /* Padding */
+    margin: 5px; /* Margin */
+    border-radius: 5px; /* Rounded corners */
+  }
+</style>
+</head>
+<body>
+<h1>CSS Flexbox Demo</h1>
+
+<h2>Basic Flexbox</h2>
+<div class="flex-container">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+  <div class="flex-item">4</div>
+</div>
+
+<h2>Advanced Flexbox</h2>
+<div class="flex-advanced">
+  <div>Flex A</div>
+  <div>Flex B</div>
+  <div>Flex C</div>
+</div>
+</body>
+</html>

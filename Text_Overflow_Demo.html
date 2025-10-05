@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+<title>CSS Font & Overflow Demo</title>
+<style>
+body {
+  font-family: "Poppins", Arial, sans-serif; /* Font */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  background-color: #f4f6f8; /* Background */
+  color: #333; /* Text color */
+}
+
+h1 {
+  text-align: center; /* Center heading */
+}
+
+/* Text demo with ellipsis */
+.text-demo {
+  width: 250px; /* Width */
+  border: 1px solid #ccc; /* Border */
+  padding: 10px; /* Padding */
+  margin: 20px auto; /* Center horizontally */
+  white-space: nowrap; /* Single line */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ... for overflow */
+  font-style: italic; /* Italic */
+  color: #555; /* Text color */
+}
+
+/* Strike through text */
+.strike-text {
+  text-decoration: line-through; /* Strike line */
+  color: crimson; /* Red */
+}
+
+/* Overflow box */
+.overflow-box {
+  background-color: #bbdefb; /* Light blue */
+  width: 300px; /* Width */
+  height: 100px; /* Height */
+  overflow-y: scroll; /* Vertical scroll */
+  margin: 20px auto; /* Center */
+  padding: 10px; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+}
+</style>
+</head>
+<body>
+<h1>CSS Font/Text & Overflow Demo</h1>
+
+<div class="text-demo">
+  This is an example of long overflowing text that gets cut off nicely...
+</div>
+
+<p class="strike-text">This text is crossed out using text-decoration: line-through.</p>
+
+<h2>Overflow Example</h2>
+<div class="overflow-box">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices, tortor nec facilisis iaculis, eros lorem tincidunt turpis, vel eleifend ipsum nisi in nulla. Proin eget augue eu erat fringilla feugiat. Duis iaculis feugiat orci, at dapibus metus sagittis id.
+</div>
+</body>
+</html>

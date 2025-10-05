@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+<title>CSS Media Queries Demo</title>
+<style>
+body {
+  font-family: "Poppins", Arial, sans-serif; /* Font */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  background-color: #f4f6f8; /* Background */
+}
+
+h1 {
+  text-align: center; /* Center heading */
+}
+
+/* Box to show media changes */
+.box {
+  width: 300px; /* Default width */
+  height: 200px; /* Height */
+  background-color: #3f51b5; /* Blue */
+  color: white; /* White text */
+  margin: 20px auto; /* Center horizontally */
+  display: flex; /* Flex to center text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-weight: bold; /* Bold text */
+}
+
+/* MEDIA QUERIES */
+
+/* If screen width <= 900px */
+@media (max-width: 900px) {
+  body {
+    background-color: #e8f5e9; /* Light green */
+  }
+  .box {
+    background-color: #ff9800; /* Orange */
+  }
+}
+
+/* If screen width <= 600px */
+@media (max-width: 600px) {
+  body {
+    background-color: #fff9c4; /* Light yellow */
+  }
+  .box {
+    background-color: #f44336; /* Red */
+    width: 200px; /* Smaller width */
+  }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+  body {
+    border: 5px solid teal; /* Border to indicate landscape */
+  }
+}
+</style>
+</head>
+<body>
+<h1>CSS Media Queries Demo</h1>
+<div class="box">Resize Me!</div>
+</body>
+</html>

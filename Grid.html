@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+<title>CSS Grid Demo with Template Areas</title>
+<style>
+body {
+  font-family: "Poppins", Arial, sans-serif; /* Font */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f4f6f8; /* Background color */
+}
+h1, h2 {
+  text-align: center; /* Center headings */
+}
+
+/* BASIC GRID WITH TEMPLATE AREAS */
+.grid-container {
+  display: grid; /* Activate grid */
+  grid-template-areas: /* Define named areas */
+    "header header header header"
+    "sidebar main main ad"
+    "footer footer footer footer";
+  grid-template-columns: 150px 1fr 1fr 150px; /* Columns: sidebar, main, main, ad */
+  grid-template-rows: 80px 200px 80px; /* Row heights */
+  gap: 10px; /* Gap between items */
+  padding: 20px; /* Padding */
+  background-color: #fce4ec; /* Light pink */
+}
+
+.grid-container > div {
+  display: flex; /* Flex to center content */
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  font-weight: bold; /* Bold text */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+}
+
+/* Assign grid areas to each item */
+.grid-container .header { 
+    grid-area: header; 
+    background-color: #f06292; 
+}
+.grid-container .sidebar { 
+    grid-area: sidebar;
+     background-color: #ec407a;
+     }
+.grid-container .main { 
+    grid-area: main; 
+    background-color: #e91e63;
+ }
+.grid-container .ad { 
+    grid-area: ad; 
+    background-color: #d81b60; 
+}
+.grid-container .footer { 
+    grid-area: footer; 
+    background-color: #c2185b; 
+}
+
+</style>
+</head>
+<body>
+<h1>CSS Grid Demo</h1>
+
+<h2>Expanded Grid with Template Areas</h2>
+<div class="grid-container">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="main">Main Content</div>
+  <div class="ad">Advertisement</div>
+  <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>

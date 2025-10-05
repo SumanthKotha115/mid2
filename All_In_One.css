@@ -1,0 +1,320 @@
+/* ======= FONT & TEXT PROPERTIES ======= */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px #aaa;
+}
+
+h2 {
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+}
+
+p {
+  text-indent: 20px;
+  word-spacing: 4px;
+  line-height: 1.6;
+}
+
+.text-demo {
+  width: 250px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+  color: #555;
+}
+
+.strike-text {
+  text-decoration: line-through;
+  color: crimson;
+}
+
+/* ======= NAVBAR (FLEXBOX EXAMPLE 1) ======= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0078ff;
+  color: white;
+  padding: 10px 20px;
+  position: sticky; /* STICKY POSITION */
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ======= POSITIONING EXAMPLES ======= */
+.position-demo {
+  position: relative; /* RELATIVE parent */
+  min-height: 800px; /* make parent tall enough for sticky */
+  margin: 20px;
+  background-color: #e0f7fa;
+  border: 2px dashed #00acc1;
+  padding-top: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+}
+
+.static-box {
+  background-color: #009688;
+  position: static; /* Default */
+}
+
+.relative-box {
+  background-color: #ff9800;
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+.absolute-box {
+  background-color: #f44336;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+/* ======= STICKY BOX FIX ======= */
+.sticky-box {
+  position: sticky;
+  top: 70px; /* navbar height + spacing */
+  background-color: #8e24aa;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 100; /* above other content */
+}
+
+.zindex-demo {
+  position: relative;
+  height: 120px;
+  margin: 30px;
+}
+
+.z1, .z2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+}
+.z1 {
+  background: red;
+  left: 30px;
+  z-index: 1;
+}
+.z2 {
+  background: blue;
+  left: 60px;
+  z-index: 2;
+}
+
+.fixed-box {
+  background-color: #3f51b5;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* ======= FLEXBOX ADVANCED ======= */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff3e0;
+}
+
+.flex-item {
+  background-color: #ffb74d;
+  width: 120px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  border-radius: 10px;
+  flex-grow: 1;
+  transition: transform 0.3s;
+}
+
+.flex-item:hover {
+  transform: scale(1.1);
+}
+
+.flex-advanced {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background: #e1bee7;
+  padding: 10px;
+}
+
+.flex-advanced div {
+  background: #ab47bc;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* ======= GRID TEMPLATE AREAS ======= */
+.grid-area-demo {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-columns: 150px 1fr 1fr;
+  grid-template-rows: 80px 200px 80px;
+  gap: 10px;
+  padding: 20px;
+  background-color: #e8eaf6;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.grid-area-demo > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.grid-area-demo .header { grid-area: header; background: #3f51b5; }
+.grid-area-demo .sidebar { grid-area: sidebar; background: #5c6bc0; }
+.grid-area-demo .main { grid-area: main; background: #7986cb; }
+.grid-area-demo .footer { grid-area: footer; background: #283593; }
+
+/* ======= GRID ADVANCED ======= */
+.grid-advanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 100px;
+  gap: 15px;
+  padding: 20px;
+  background-color: #e0f2f1;
+}
+
+.grid-advanced div {
+  background: #26a69a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* ======= OVERFLOW & SIZING ======= */
+.overflow-box {
+  background-color: #bbdefb;
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ======= MEDIA QUERIES ======= */
+@media (max-width: 900px) {
+  body {
+    background-color: #e8f5e9;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: #fff9c4;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .fixed-box {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    border: 5px solid teal;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #f5f5f5;
+  }
+  nav {
+    background: #333;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  nav, .fixed-box {
+    display: none;
+  }
+}
